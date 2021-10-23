@@ -24,10 +24,10 @@ def home (request):
                 "feels_like":str(list_of_data['main']['feels_like']),
 
             }
-            return render(request,'home2.html',data)
+            return render(request,'index.html',data)
         except :
             messages.error(request,'The city you entered is not found')
-            return render(request,'home2.html')
+            return render(request,'index.html')
 
 
         # except: 
@@ -40,4 +40,4 @@ def home (request):
     else:
         data={}
     
-    return render(request,'home2.html',data)
+    return render(request,'index.html',data)
